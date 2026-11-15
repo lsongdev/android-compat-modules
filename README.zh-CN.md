@@ -14,7 +14,7 @@
 
 ## 安装与撤销
 
-仓库为私有，查看源码和下载 Release 需要 GitHub 登录及仓库权限。面具模块不配置自动更新地址，后续从 Release 手动下载安装；不要将 GitHub token 放入模块。
+仓库和 Release 现为公开。本版本采用手动下载更新，面具模块未配置自动更新地址；不要将 GitHub token 放入模块。
 
 从 Releases 下载 ZIP 或已签名 APK，可对照 SHA256SUMS 校验。
 

@@ -15,4 +15,4 @@ First maintained release, standardized from locally verified BOE Funbook C1 fixe
 
 Prototype APK package: `local.funbook.fluttercompat`. Public APK is a separate app; see migration instructions.
 
-- Private repository distribution: release assets require GitHub access; no unauthenticated Magisk update URLs are embedded.
+- Manual release distribution: no GitHub credentials or Magisk update URLs are embedded.

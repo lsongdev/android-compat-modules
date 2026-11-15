@@ -33,6 +33,6 @@ The module intentionally targets API 35 with Android 8.0+ support. A newer lint 
 - Signed `org.lsong.fluttercompat` 1.1.0 / versionCode 2 / target API 35 installed. The prototype APK was removed. Only Panda English/user 0 is enabled in the new scope.
 - Direct cold launch of Panda, without helper extras, reports the new module applying Impeller=false before FlutterJNI.init. The user confirmed no flicker and no slowdown.
 - The final CI build is [44806b8](https://github.com/lsongdev/android-compat-modules/commit/44806b8405e940e0c6d7bfa3e347e363e5936c6f), [run 43669047198](https://github.com/lsongdev/android-compat-modules/actions/runs/43669047198). Three argument tests passed; Android lint has no errors and retains the documented OldTargetApi recommendation.
-- Source and release assets are currently private. No private signing material was committed or sent to CI. Magisk updateJson URLs are omitted because release downloads require authentication.
+- The repository is now public. No private signing material was committed or sent to CI. This version retains manual updates without Magisk updateJson URLs.
 
 The two final APK builds differ only in their version-control provenance entry; all code and resource payloads match. The installed release APK was signed from the final CI artifact. Bluetooth peripheral audio and other Flutter apps remain outside these checks.

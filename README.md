@@ -14,7 +14,7 @@ These are compatibility workarounds, not GPU driver replacements. The Flutter mo
 
 ## Install
 
-This repository is private. GitHub sign-in and repository access are required for source and release assets. Magisk auto-update URLs are intentionally omitted; download updates manually from Releases. Never embed a GitHub token in a module.
+The repository and release assets are public. This version uses manual release downloads; Magisk auto-update URLs are intentionally omitted. Never embed a GitHub token in a module.
 
 Download signed APKs / module ZIPs from Releases and compare them with `SHA256SUMS`.
 
