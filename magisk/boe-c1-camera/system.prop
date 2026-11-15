@@ -1,0 +1,3 @@
+# Factory orientation values from BOE Funbook C1 (C1S100).
+ro.vendor.camera.main.orientation=90
+ro.vendor.camera.sub.orientation=270

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flutter 渲染兼容</string>
+    <string name="module_description">在选中的 Flutter 应用中关闭 Impeller，保留 GPU 加速。需要引擎仍支持 Skia 回退。</string>
+    <string name="settings_text">Flutter 渲染兼容 1.1.0\n\n在 Vector 或 LSPosed 中启用模块，勾选需要修复的应用，建议先尝试 Panda English。\n\n修改作用范围后，强制停止并重新打开目标应用。之后可使用正常入口启动。\n\n本模块关闭 Impeller，不启用软件渲染、不修改原 APK。已移除 Skia 回退的 Flutter 版本不适用。\n\n取消应用勾选或停用模块，再重启应用即可撤销。卸载此 APK 会删除模块。</string>
+</resources>

@@ -1,0 +1,28 @@
+name: Bug report / 问题报告
+description: Report a compatibility issue without sharing private device data.
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Module / 模块
+      options: [BOE C1 Bluetooth, BOE C1 Camera, Flutter Render Compat]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Module, Android and framework versions / 版本
+      description: Include device model and ROM name; omit serial numbers, account IDs and tokens.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected result and actual result / 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt / 相关日志
+      description: Redact private URLs, credentials, user IDs and device addresses. Do not upload a full bug report.

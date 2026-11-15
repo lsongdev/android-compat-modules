@@ -1,0 +1,22 @@
+# Build outputs and local SDK settings
+.gradle/
+**/build/
+dist/
+local.properties
+.idea/
+*.iml
+# Signing credentials stay outside the repository
+*.jks
+*.keystore
+*.pk8
+*.pem
+*.p12
+.env
+.env.*
+# Device captures and firmware
+*.img
+*.img.gz
+*.img.xz
+*.apk
+*.log
+__pycache__/

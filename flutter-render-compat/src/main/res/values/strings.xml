@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flutter Render Compat</string>
+    <string name="module_description">Disable Impeller in selected Flutter apps while keeping GPU acceleration. Requires an engine with Skia fallback.</string>
+    <string name="settings_text">Flutter Render Compat 1.1.0\n\nEnable this module in Vector or LSPosed and select the apps to fix. Start with Panda English.\n\nForce stop and reopen each app after changing scope. Any normal launch entry can then be used.\n\nThe module disables Impeller without enabling software rendering or changing the original APK. Flutter engines without Skia fallback are not supported.\n\nTo undo, deselect the app or disable the module, then force stop and reopen the app. Uninstalling this APK removes the module.</string>
+    <string-array name="recommended_scope">
+        <item>com.pplingo.tigoenglish.student</item>
+    </string-array>
+</resources>

@@ -1,0 +1,3 @@
+# TrebleDroid uses OpCodeIndex byte * 10 + bit, NOT the HCI opcode.
+# 182 = byte 18, bit 2 = READ_DEFAULT_ERRONEOUS_DATA_REPORTING (0x0C5A).
+persist.sys.bt.unsupported.commands=182

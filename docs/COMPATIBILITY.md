@@ -1,0 +1,23 @@
+# Compatibility and verification
+
+## Verified prototype behavior
+
+Device: BOE Funbook C1 (C1S100), MT8788 / Mali-G72 MP3, original Android 10 vendor stack and Linux 4.14 kernel. ROM: unofficial LineageOS 21 GSI / Android 14. Magisk: 31.1. Hook framework: Vector 2.2 (3080).
+
+| Component | Observations | Limits |
+|---|---|---|
+| Camera prototype | Rear 90° and front 270° metadata persisted after reboot with the original vendor property file restored; user confirmed proportions before module migration | Recheck actual preview in each app; device values are not portable |
+| Bluetooth prototype | Reboot and off/on cycle reached ON without the previous startup abort | Peripheral pairing/audio not covered |
+| Flutter prototype | Panda English 1.0.3 default Impeller/Vulkan flickered; software rendering stopped flicker but was slow; disabling Impeller alone resolved both. Scoped hook worked from the original app entry | Other apps and engines not yet verified |
+
+Changing WebView provider from AOSP 137 to Google 157 and disabling Android hardware overlays did not resolve the Panda issue. That investigation supports an Impeller/driver interoperability problem, but does not identify a specific driver defect.
+
+## Public 1.1.0
+
+The first public build standardizes source/layout, changes the APK namespace, adds device guards, and refactors renderer argument handling into a checked pure-Java helper. Build/lint results are published in GitHub Actions. Device verification for this build is recorded below after migration; until recorded, prototype success is not a claim that a rebuilt binary was device tested.
+
+## Migration
+
+Magisk IDs remain stable, so install new ZIPs over the prototypes and reboot. The new Flutter APK uses `org.lsong.fluttercompat`; do not enable it and the old `local.funbook.fluttercompat` module simultaneously. Copy only the intended application scope, restart those apps and verify logs and visible behavior before removing the prototype.
+
+Private device captures, serial numbers, addresses, account data and signing keys are not part of this public repository.
