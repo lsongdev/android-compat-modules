@@ -4,4 +4,3 @@ version=1.1.0
 versionCode=2
 author=Lsong
 description=Mask incorrectly advertised HCI command 0x0C5A on BOE C1 with a compatible TrebleDroid Bluetooth stack.
-updateJson=https://raw.githubusercontent.com/lsongdev/android-compat-modules/main/updates/boe-c1-bluetooth.json

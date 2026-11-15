@@ -2,7 +2,7 @@
 
 ## 1.1.0 — 2026-11-15
 
-First public release, standardized from locally verified BOE Funbook C1 fixes.
+First maintained release, standardized from locally verified BOE Funbook C1 fixes.
 
 - BOE C1 camera: restore rear 90° / front 270° metadata through Magisk properties.
 - BOE C1 Bluetooth: mask incorrectly advertised HCI command using TrebleDroid index 182.
@@ -14,3 +14,5 @@ First public release, standardized from locally verified BOE Funbook C1 fixes.
 - Separate release signing from source; firmware, private keys and device captures are excluded.
 
 Prototype APK package: `local.funbook.fluttercompat`. Public APK is a separate app; see migration instructions.
+
+- Private repository distribution: release assets require GitHub access; no unauthenticated Magisk update URLs are embedded.

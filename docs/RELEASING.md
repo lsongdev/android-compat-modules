@@ -1,8 +1,8 @@
 # Releasing
 
-Each module has its own version fields and can be built and released independently. The initial `v1.1.0` release contains all three. Future component-only tags may use `camera-vX.Y.Z`, `bluetooth-vX.Y.Z` or `flutter-vX.Y.Z`; update the corresponding Magisk update JSON to the actual asset URL.
+Each module has its own version fields and can be built and released independently. The initial `v1.1.0` release contains all three. Future component-only tags may use `camera-vX.Y.Z`, `bluetooth-vX.Y.Z` or `flutter-vX.Y.Z`; private release downloads require GitHub authentication. Magisk updateJson URLs are intentionally omitted.
 
-1. Update the changed component's version and integer versionCode, changelog and update metadata. Keep Magisk IDs stable.
+1. Update the changed component's version and integer versionCode and changelog. Keep Magisk IDs stable.
 2. Run the Build workflow (unit checks, Android lint, unsigned release APK and deterministic Magisk ZIPs). Do not call an untested source refactor device-verified.
 3. Obtain the unsigned APK from CI or local Gradle output. Keep signing credentials outside the repository. Sign with Android build-tools `apksigner` and verify it:
 

@@ -14,6 +14,8 @@ These are compatibility workarounds, not GPU driver replacements. The Flutter mo
 
 ## Install
 
+This repository is private. GitHub sign-in and repository access are required for source and release assets. Magisk auto-update URLs are intentionally omitted; download updates manually from Releases. Never embed a GitHub token in a module.
+
 Download signed APKs / module ZIPs from Releases and compare them with `SHA256SUMS`.
 
 - **Magisk modules:** install the ZIP from Magisk, then reboot. Installation rejects other hardware. Read the module page first, especially the Bluetooth Treble settings requirement.
@@ -46,7 +48,7 @@ The release APK is **unsigned** until signed with the maintainer's private key. 
 
 The prototype fixes were verified on BOE C1 with unofficial LineageOS 21 / Android 14, Magisk 31.1 and Vector 2.2. Panda English 1.0.3 stopped flickering without the slowdown caused by software rendering when Impeller was disabled. BOE camera metadata and Bluetooth startup were verified after reboot. Bluetooth peripheral audio was not covered by those checks.
 
-The public 1.1.0 source standardizes the prototypes, changes the Flutter package to `org.lsong.fluttercompat`, and adds explicit device guards and build checks. See [verification and migration](docs/COMPATIBILITY.md) for release build status and remaining limitations.
+The maintained 1.1.0 source standardizes the prototypes, changes the Flutter package to `org.lsong.fluttercompat`, and adds explicit device guards and build checks. See [verification and migration](docs/COMPATIBILITY.md) for release build status and remaining limitations.
 
 ## Project boundaries
 
