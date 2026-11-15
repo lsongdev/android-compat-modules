@@ -29,3 +29,7 @@ Module ID: `boe_c1_camera_orientation` (unchanged from the prototype). Propertie
 ## Build
 
 Run `python3 tools/package.py` inside this module directory. Python 3.11+ is required; the ZIP is written to `dist/`.
+
+## Project documentation
+
+[Compatibility](docs/COMPATIBILITY.md) · [Release process](docs/RELEASING.md) · [Changelog](CHANGELOG.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
