@@ -11,7 +11,7 @@ COMPONENTS = ("boe-c1-bluetooth", "boe-c1-camera")
 
 
 def package(component):
-    source = ROOT / "magisk" / component
+    source = ROOT / component
     properties = dict(line.split("=", 1) for line in
                       (source / "module.prop").read_text().splitlines()
                       if "=" in line and not line.startswith("#"))

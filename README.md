@@ -6,9 +6,11 @@ Small, reversible Android compatibility fixes developed on a BOE Funbook C1 (C1S
 
 | Module | Install as | Scope / purpose |
 |---|---|---|
-| [BOE C1 Bluetooth](magisk/boe-c1-bluetooth/README.md) | Magisk ZIP | BOE C1 + compatible TrebleDroid stack; ignore an incorrectly advertised HCI command |
-| [BOE C1 Camera](magisk/boe-c1-camera/README.md) | Magisk ZIP | BOE C1; restore factory camera orientation metadata |
+| [BOE C1 Bluetooth](boe-c1-bluetooth/README.md) | Magisk ZIP | BOE C1 + compatible TrebleDroid stack; ignore an incorrectly advertised HCI command |
+| [BOE C1 Camera](boe-c1-camera/README.md) | Magisk ZIP | BOE C1; restore factory camera orientation metadata |
 | [Flutter Render Compat](flutter-render-compat/README.md) | APK + Vector/LSPosed | Selected Flutter apps; disable Impeller while retaining GPU acceleration |
+
+Each module lives in its own top-level directory and has its own install instructions and build path. They share only repository-level release tooling.
 
 These are compatibility workarounds, not GPU driver replacements. The Flutter module is potentially useful beyond this tablet, but is not a universal fix for every Flutter version or application.
 

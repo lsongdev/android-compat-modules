@@ -6,9 +6,11 @@
 
 | 模块 | 安装方式 | 用途 |
 |---|---|---|
-| [蓝牙兼容](magisk/boe-c1-bluetooth/README.md) | 面具 ZIP | 特定 TrebleDroid 蓝牙协议栈，屏蔽芯片错误宣称支持的命令 |
-| [摄像头方向](magisk/boe-c1-camera/README.md) | 面具 ZIP | 恢复 BOE C1 原厂前后摄像头方向 |
+| [蓝牙兼容](boe-c1-bluetooth/README.md) | 面具 ZIP | 特定 TrebleDroid 蓝牙协议栈，屏蔽芯片错误宣称支持的命令 |
+| [摄像头方向](boe-c1-camera/README.md) | 面具 ZIP | 恢复 BOE C1 原厂前后摄像头方向 |
 | [Flutter 渲染兼容](flutter-render-compat/README.md) | APK + Vector/LSPosed | 按应用关闭 Impeller，保留 GPU 加速 |
+
+三个模块目录直接并列放在仓库根目录，各自维护说明和构建入口；仓库级脚本只负责公共打包与发布辅助。
 
 前两个模块只适用于已验证的 BOE C1，不是通用联发科补丁。Flutter 模块不修改原应用签名，不启用软件渲染，不更新显卡驱动。
 
