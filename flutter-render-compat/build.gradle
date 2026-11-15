@@ -7,6 +7,7 @@ android {
     defaultConfig {
         applicationId 'org.lsong.fluttercompat'
         minSdk 26
+        // Keep the validated API 35 target; newer API targets need device validation.
         targetSdk 35
         versionCode 2
         versionName '1.1.0'

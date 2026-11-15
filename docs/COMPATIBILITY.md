@@ -21,3 +21,5 @@ The first public build standardizes source/layout, changes the APK namespace, ad
 Magisk IDs remain stable, so install new ZIPs over the prototypes and reboot. The new Flutter APK uses `org.lsong.fluttercompat`; do not enable it and the old `local.funbook.fluttercompat` module simultaneously. Copy only the intended application scope, restart those apps and verify logs and visible behavior before removing the prototype.
 
 Private device captures, serial numbers, addresses, account data and signing keys are not part of this public repository.
+
+The module intentionally targets API 35 with Android 8.0+ support. A newer lint database may recommend a newer target (`OldTargetApi`); that recommendation is retained rather than suppressed. It is not a build error. Backup is explicitly disabled for both the pre-Android-12 and newer extraction policies.
