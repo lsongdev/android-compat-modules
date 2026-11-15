@@ -24,16 +24,23 @@ jobs:
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
       - name: Build, lint and check renderer arguments
-        run: ./gradlew --no-daemon :flutter-render-compat:assembleRelease :flutter-render-compat:lintRelease :flutter-render-compat:testReleaseUnitTest
+        run: ./flutter-render-compat/gradlew -p flutter-render-compat --no-daemon assembleRelease lintRelease testReleaseUnitTest
       - name: Package Magisk modules
-        run: python3 scripts/package-magisk.py
+        run: |
+          python3 boe-c1-camera/tools/package.py
+          python3 boe-c1-bluetooth/tools/package.py
       - name: Collect unsigned APK
-        run: cp flutter-render-compat/build/outputs/apk/release/flutter-render-compat-release-unsigned.apk dist/flutter-render-compat-1.1.0-unsigned.apk
+        run: |
+          mkdir -p flutter-render-compat/dist
+          cp flutter-render-compat/build/outputs/apk/release/flutter-render-compat-release-unsigned.apk flutter-render-compat/dist/flutter-render-compat-1.1.0-unsigned.apk
       - name: Upload build outputs
         uses: actions/upload-artifact@v4
         with:
           name: android-compat-modules
-          path: dist/
+          path: |
+            boe-c1-camera/dist/
+            boe-c1-bluetooth/dist/
+            flutter-render-compat/dist/
           if-no-files-found: error
       - name: Upload check reports
         if: always()

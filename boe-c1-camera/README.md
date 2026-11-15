@@ -25,3 +25,7 @@ The module does not write `/vendor/build.prop`, patch image buffers, or change a
 The installer checks the vendor model and hardware before applying the device-specific values. There is no recovery ZIP installation support.
 
 Module ID: `boe_c1_camera_orientation` (unchanged from the prototype). Properties and scripts are GPL-3.0-only; installer attribution is in the repository's third-party notices.
+
+## Build
+
+Run `python3 tools/package.py` inside this module directory. Python 3.11+ is required; the ZIP is written to `dist/`.

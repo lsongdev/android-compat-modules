@@ -11,5 +11,4 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "android-compat-modules"
-include(":flutter-render-compat")
+rootProject.name = "flutter-render-compat"

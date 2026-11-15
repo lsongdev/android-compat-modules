@@ -9,16 +9,16 @@ Each module has its own version fields and can be built and released independent
 ```sh
 apksigner sign --key /private/path/signing-key.pk8 \
   --cert /private/path/signing-cert.pem \
-  --out dist/flutter-render-compat-1.1.0.apk \
+  --out flutter-render-compat/dist/flutter-render-compat-1.1.0.apk \
   flutter-render-compat/build/outputs/apk/release/flutter-render-compat-release-unsigned.apk
-apksigner verify --verbose dist/flutter-render-compat-1.1.0.apk
+apksigner verify --verbose flutter-render-compat/dist/flutter-render-compat-1.1.0.apk
 ```
 
 Use the same signing key for future updates to the public APK. Do not check it in, paste it in an issue, or sign official releases with an ephemeral CI debug key. CI does not receive the maintainer's signing key.
 
-4. Build desired Magisk modules with `python3 scripts/package-magisk.py [component]`.
+4. Build desired Magisk modules with `python3 <module>/tools/package.py`.
 5. Install signed candidates on the target device, verify version, scope/hook behavior and affected hardware. Check rollback. Keep private observations locally and publish only a redacted compatibility summary.
-6. Run `python3 scripts/checksums.py`. Upload only signed APKs, module ZIPs and SHA256SUMS as release assets. CI artifacts with `unsigned` in their name cannot be installed as-is.
+6. Run `python3 flutter-render-compat/tools/checksums.py`. Upload only signed APKs, module ZIPs and SHA256SUMS as release assets. CI artifacts with `unsigned` in their name cannot be installed as-is.
 7. Publish the tag and release notes. The repository root LICENSE and third-party notices must remain available with the corresponding source.
 
 The prototype APK had a different package name and does not impose a signing identity on the public package. The first public package can use an existing private maintainer key kept outside this repository.

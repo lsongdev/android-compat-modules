@@ -2,16 +2,15 @@
 # SPDX-License-Identifier: GPL-3.0-only
 """Build deterministic Magisk ZIPs from an explicit source allowlist."""
 from pathlib import Path
-import argparse
 import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-COMPONENTS = ("boe-c1-bluetooth", "boe-c1-camera")
+COMPONENT = "boe-c1-camera"
 
 
 def package(component):
-    source = ROOT / component
+    source = ROOT
     properties = dict(line.split("=", 1) for line in
                       (source / "module.prop").read_text().splitlines()
                       if "=" in line and not line.startswith("#"))
@@ -46,8 +45,4 @@ def package(component):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("component", nargs="?", choices=(*COMPONENTS, "all"), default="all")
-    args = parser.parse_args()
-    for component in COMPONENTS if args.component == "all" else (args.component,):
-        package(component)
+    package(COMPONENT)

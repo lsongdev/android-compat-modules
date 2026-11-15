@@ -5,8 +5,9 @@ Use a separate branch and describe the device, Android/ROM, framework and app ve
 Before submitting:
 
 ```sh
-python3 scripts/package-magisk.py
-./gradlew :flutter-render-compat:lintRelease :flutter-render-compat:testReleaseUnitTest :flutter-render-compat:assembleRelease
+python3 boe-c1-camera/tools/package.py
+python3 boe-c1-bluetooth/tools/package.py
+./flutter-render-compat/gradlew -p flutter-render-compat :lintRelease :testReleaseUnitTest :assembleRelease
 ```
 
 Keep Magisk IDs stable. Do not broaden BOE C1 hardware guards without testing the exact new model and documenting its factory camera values. Flutter rendering selection is process-wide; compatibility claims need real device/app checks. Keep unknown engine versions unchanged rather than patching native code speculatively.

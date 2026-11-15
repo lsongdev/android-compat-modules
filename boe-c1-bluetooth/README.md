@@ -31,3 +31,7 @@ Source references:
 - [TrebleDroid controller command mask](https://github.com/TrebleDroid/platform_packages_modules_Bluetooth/blob/android-14.0.0_r50-td/system/gd/hci/controller.cc)
 - [TrebleDroid command indices](https://github.com/TrebleDroid/platform_packages_modules_Bluetooth/blob/android-14.0.0_r50-td/system/pdl/hci/hci_packets.pdl)
 - [Treble app MediaTek workaround](https://github.com/TrebleDroid/treble_app/blob/master/app/src/main/java/me/phh/treble/app/Misc.kt)
+
+## Build
+
+Run `python3 tools/package.py` inside this module directory. Python 3.11+ is required; the ZIP is written to `dist/`.

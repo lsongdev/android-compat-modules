@@ -10,7 +10,7 @@
 | [摄像头方向](boe-c1-camera/README.md) | 面具 ZIP | 恢复 BOE C1 原厂前后摄像头方向 |
 | [Flutter 渲染兼容](flutter-render-compat/README.md) | APK + Vector/LSPosed | 按应用关闭 Impeller，保留 GPU 加速 |
 
-三个模块目录直接并列放在仓库根目录，各自维护说明和构建入口；仓库级脚本只负责公共打包与发布辅助。
+三个模块目录直接并列放在仓库根目录，各自维护说明和构建入口；构建工具及其依赖均随模块放置，可分别构建。
 
 前两个模块只适用于已验证的 BOE C1，不是通用联发科补丁。Flutter 模块不修改原应用签名，不启用软件渲染，不更新显卡驱动。
 
@@ -32,12 +32,13 @@
 
 ## 构建与验证
 
-面具 ZIP：`python3 scripts/package-magisk.py`。
+面具 ZIP：`python3 boe-c1-camera/tools/package.py
+python3 boe-c1-bluetooth/tools/package.py`。
 
 Flutter：JDK 17+、Android SDK 35、build-tools 35.0.0，然后执行：
 
 ```sh
-./gradlew :flutter-render-compat:assembleRelease :flutter-render-compat:lintRelease :flutter-render-compat:testReleaseUnitTest
+./flutter-render-compat/gradlew -p flutter-render-compat :assembleRelease :lintRelease :testReleaseUnitTest
 ```
 
 生成的 release APK 未签名，正式发布需用仓库外保存的私钥签名；CI 构建产物不等于正式签名版本。

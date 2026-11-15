@@ -37,3 +37,7 @@ To undo, deselect the target app or disable this module, save/apply, and force s
 The signing key is intentionally absent from source and CI. See [release instructions](../docs/RELEASING.md).
 
 Upstream initialization reference: [FlutterJNI](https://github.com/flutter/engine/blob/main/shell/platform/android/io/flutter/embedding/engine/FlutterJNI.java). The installed app's bundled engine version, not the current upstream branch, determines actual compatibility.
+
+## Build
+
+From this directory, run `./gradlew assembleRelease lintRelease testReleaseUnitTest` with JDK 17+, Android SDK 35 and build-tools 35.0.0. The wrapper and all Gradle configuration belong to this module. Signed release files go in `dist/`; run `python3 tools/checksums.py` to generate their checksums.
